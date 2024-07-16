@@ -24,6 +24,13 @@
 //     }
 // });
 
+
+//---------------------------------------------------------------------------------------------------
+
+//------------------------------   Exercises on DOM Manipulation Part 1   ---------------------------
+
+//---------------------------------------------------------------------------------------------------
+
 const recipeName = document.getElementById("recipe-name");
 console.log("1. The Recipe Name is:", recipeName.textContent);
 
@@ -73,19 +80,46 @@ console.log(
 );
 
 
-//dummy solution
-const theInstructions = 'hello';
-const theInstructionsObject = {
-    order: 1,
-    text: 'instruction'
-  }
 
-const theInstructionsArray = [theInstructionsObject, theInstructionsObject, theInstructionsObject]
 
-console.log(
-  "8. Create an an array of objects from the instructions. Each element in the array should be an object that looks like this:"
-, theInstructionsArray);
+// "8. Create an an array of objects from the instructions. Each element in the array should be an object that looks like this: "
 // {
 //     order: number;
 //     text: instruction;
 //   }
+const theInstructions = document.querySelector('ol.instructions-list');
+console.log('type of theInstructions is an-', typeof theInstructions)
+console.log('theInstructions:', theInstructions)
+const theInstructionsObject = theInstructions.querySelectorAll('li');
+
+// test to print order and element
+// const theInstructionsList = theInstructionsObject.forEach((element, order) => {console.log(`{order: ${order+1}; text: ${element.innerHTML};}`)});
+
+// solution 1
+// const theInstructionsList = Array.from(theInstructionsObject).map((element, order) => ({
+//     order: order + 1,
+//     text: element.innerHTML.trim(),
+// }));
+
+
+// solution 2
+const theInstructionsList = [];
+theInstructionsObject.forEach((element, order) => {
+    theInstructionsList.push({
+        order: order + 1,
+        text: element.innerHTML.trim(),
+    });
+});
+
+console.log(
+  "8. Instructions array of objects: "
+, theInstructionsList);
+
+
+
+
+//---------------------------------------------------------------------------------------------------
+
+//------------------------------   Exercises on DOM Manipulation Part 2   ---------------------------
+
+//---------------------------------------------------------------------------------------------------
