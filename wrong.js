@@ -53,6 +53,12 @@ ingredientsContainer.style.backgroundColor = '#f9f9f9';
 
 
 // 9. The ingredients are divided in to two parts, one for the bottom and one for the paste. In the list of the ingredients to the bottom, there is a text instead of two list items. Remove the text and add those two list items.
+let bottomIngredientsList = document.querySelector('.ingredients-list-bottom');
+bottomIngredientsList.innerHTML = '';
+bottomIngredientsList.innerHTML = `
+  <li>15st digestivetex</li>
+  <li>Lite smör</li>
+`;
 
 
 // 10. The third ingredient in the list of ingredients to the paste is wrong. Change that specific ingredient to the correct one.
