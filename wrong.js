@@ -62,10 +62,16 @@ bottomIngredientsList.innerHTML = `
 
 
 // 10. The third ingredient in the list of ingredients to the paste is wrong. Change that specific ingredient to the correct one.
+let pasteIngredientsList = document.querySelectorAll('.ingredients-list-paste li');
+pasteIngredientsList[2].textContent = '3tsk vaniljsocker';
 
 
 
 // 11. There is also a missing ingredient in the list of ingredients to the paste. Look and see what it is and add that one the the end of the list.
+let currentPasteIngredientsList = document.querySelector('.ingredients-list-paste');
+let newIngredient = document.createElement('li');
+newIngredient.textContent = '400g naturell philadelphiaost';
+currentPasteIngredientsList.appendChild(newIngredient);
 
 
 
