@@ -38,7 +38,8 @@ timerIcon.classList.add('material-icons');
 
 
 // 6. The estimated time of the recipe is also incorrect. Change it to the correct time estimation.
-
+let timeElement = document.querySelector('.time-container .time');
+timeElement.textContent = '60+ min';
 
 
 // 7. The src path to the image is wrong, or atleast it's showing the wrong image. Change it to the correct one. The available images can be found in the assets folder.
