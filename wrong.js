@@ -66,10 +66,13 @@ newIngredient.textContent = "400g naturell philadelphiaost";
 currentPasteIngredientsList.appendChild(newIngredient);
 
 // 12. The text "Instructions" to the left, beneath the image, has some shadow styling applied to it. Remove that styling.
-let instructionsHeader = document.querySelector('.instructions.shadow');
-instructionsHeader.classList.remove('shadow');
-
-
-
+let instructionsHeader = document.querySelector(".instructions.shadow");
+instructionsHeader.classList.remove("shadow");
 
 // 13. Two list elements of the list of instructions are incorrect. Find them and change them to the correct ones.
+let instructionsListItems = document.querySelectorAll(".instructions-list li");
+instructionsListItems[0].textContent =
+  "Smula sönder 10 stycken digistivetex och blanda sen med smöret. Bred ut det i botten av en en rund form med lösbara kanter. Det ska bli som en tjockt täcke på botten av formen.";
+instructionsListItems[1].textContent =
+  "Separera ägggulor och äggvitor. Äggvitorna lägger du i en stor bunke, äggulorna i en liten bunke.";
+instructionsListItems[8].textContent = "Ställ in i frysen över natten.";
